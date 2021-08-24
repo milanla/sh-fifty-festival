@@ -1,0 +1,17 @@
+html {
+  // let users have control over the font size when they zoom in/out
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'LunchType-Regular', Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+  color: #ffffff;
+}

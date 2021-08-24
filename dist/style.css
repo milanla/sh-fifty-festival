@@ -1,0 +1,145 @@
+/* @font-face allows us to embed custom fonts on our page */
+/* here we have the code snippet from css-tricks
+which provides modern (but still very wide) browser support*/
+@font-face {
+  font-family: 'LunchType-Regular';
+  src: url("/assets/fonts/lunchtype22-regular-webfont.woff2") format("woff2"), url("/assets/fonts/lunchtype22-regular-webfont.woff") format("woff"), url("/assets/fonts/lunchtype22-regular-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'LunchType-Medium';
+  src: url("/assets/fonts/lunchtype24-medium-expanded-webfont.woff2") format("woff2"), url("/assets/fonts/lunchtype24-medium-expanded-webfont.woff") format("woff"), url("/assets/fonts/lunchtype24-medium-expanded-webfont.ttf") format("truetype");
+}
+
+.marquee {
+  font-family: 'LunchType-Medium', Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'LunchType-Regular', Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  50% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  50% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+/* here we have a little helper class that adds padding to our sections that can be reused and just does one thing */
+.section-pad {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.container {
+  max-width: 810px;
+  margin: auto;
+}
+
+.intro {
+  background-image: url("/assets/images/intro.jpg");
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro p {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 112px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.appear {
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.marquee {
+  position: absolute;
+  top: 3vh;
+  left: 0;
+  width: 100%;
+  font-size: 5vw;
+  overflow: hidden;
+}
+
+.marquee span {
+  white-space: nowrap;
+  display: block;
+  position: relative;
+}
+
+.difference {
+  mix-blend-mode: difference;
+}
+/*# sourceMappingURL=style.css.map */
