@@ -16,6 +16,9 @@ which provides modern (but still very wide) browser support*/
       url('/assets/fonts/lunchtype24-medium-expanded-webfont.ttf') format('truetype');
 }
 
-.marquee {
+.marquee,
+.lunch-medium,
+.date,
+.lineup h2 {
   font-family: 'LunchType-Medium', Arial, Helvetica, sans-serif;
 }

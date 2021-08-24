@@ -12,3 +12,27 @@
     opacity: 1;
   }
 }
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-3000vw);
+  }
+}
+
+// @keyframes pulsate {
+//   0% {
+//     transform: scale(1);
+//   }
+
+//   50% {
+//     transform: scale(1.2);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }

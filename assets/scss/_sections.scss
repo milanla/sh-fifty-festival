@@ -17,19 +17,19 @@
 
 // INTRO SECTION
 .intro {
-  background-image: url('/assets/images/intro.jpg');
+  background-image: url('../assets/images/intro.jpg');
+  color: #fff;
+
+  p {
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 
 .bg-cover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.intro p {
-  font-size: 36px;
-  line-height: 1.2;
-  color: #fff;
 }
 
 .logo {
@@ -62,6 +62,7 @@
   overflow: hidden;
 
   span {
+    animation: moveLeft 200s linear infinite;
     white-space: nowrap;
     display: block;
     position: relative;
@@ -70,4 +71,51 @@
 
 .mix-difference {
   mix-blend-mode: difference;
+}
+
+/*----------------------------------*/
+.day {
+  text-align: center;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.day-1 {
+  background-color: #fd76A7;
+}
+
+.day-2 {
+  background-color: #1bb190;
+}
+
+.day-3 {
+  background-image: url('../assets/images/day-3.jpg');
+}
+
+.lineup {
+  text-align: center;
+
+  h2 {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 21px;
+  }
+
+  li {
+    margin-bottom: 24px;
+  }
+}
+
+.date {
+  font-size: 28px;
+  color: #ffeecf;
+  margin-bottom: 48px;
+  line-height: 1;
 }
