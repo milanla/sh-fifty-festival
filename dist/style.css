@@ -146,8 +146,8 @@ ul, ol {
           animation-name: fadeIn;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -219,6 +219,23 @@ ul, ol {
   color: #ffeecf;
   margin-bottom: 48px;
   line-height: 1;
+}
+
+.scroll-to {
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 64px;
+  height: 32px;
+  background-image: url("../assets/images/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.scroll-to-intro {
+  background-image: url("../assets/images/down-arrow-light.svg");
 }
 
 .shape {
@@ -321,5 +338,20 @@ ul, ol {
 .squiggle:nth-of-type(8) {
   right: 0%;
   bottom: 5%;
+}
+
+@media (min-width: 640px) {
+  .shape,
+  .lineup li,
+  .date {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  .in-viewport .shape,
+  .in-viewport .lineup li,
+  .in-viewport .date {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

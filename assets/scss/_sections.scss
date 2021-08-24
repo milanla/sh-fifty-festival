@@ -49,7 +49,7 @@
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 3s;
-  animation-delay: 1s;
+  animation-delay: 300ms;
   animation-fill-mode: forwards;
 }
 
@@ -119,4 +119,23 @@
   color: #ffeecf;
   margin-bottom: 48px;
   line-height: 1;
+}
+
+// Arrow link
+.scroll-to {
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  transform: translateX(-50%);
+
+  width: 64px;
+  height: 32px;
+
+  background-image: url('../assets/images/down-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.scroll-to-intro {
+  background-image: url('../assets/images/down-arrow-light.svg');
 }

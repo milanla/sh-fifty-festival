@@ -2,6 +2,8 @@ html {
   // let users have control over the font size when they zoom in/out
   font-size: 100%;
   box-sizing: border-box;
+  // scroll-behavior is currently not supported in Safari
+  // scroll-behavior: smooth;
 }
 
 *, *::before, *::after {

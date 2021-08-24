@@ -40,3 +40,45 @@ squiggles.forEach((squiggle, index) => {
     iterations: Infinity
   })
 })
+
+// InView - Adding animation when each section is scroll into view
+inView('.section')
+  .on('enter', section => {
+    section.classList.add('in-viewport')
+  })
+  .on('exit', section => {
+    section.classList.remove('in-viewport')
+  })
+
+inView.threshold(0.2)
+
+const sections = document.querySelectorAll('.section')
+
+sections.forEach((section, index) => {
+  const artists = section.querySelectorAll('.lineup li')
+  const shapes = section.querySelectorAll('.shape')
+
+  artists.forEach((artist, index) => {
+    const delay = index * 100
+    artist.style.transitionDelay = `${delay}ms`
+  })
+
+  shapes.forEach((shape, index) => {
+    const delay = artists.length + index * 100
+    shape.style.transitionDelay = `${delay}ms`
+  })
+})
+
+// Smooth scrolling
+const scrollLinks = document.querySelectorAll('.js-scroll')
+
+scrollLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault()
+    const href = link.getAttribute('href')
+
+    document.querySelector(href).scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
+})
