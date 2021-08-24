@@ -176,6 +176,7 @@ ul, ol {
 /*----------------------------------*/
 .day {
   text-align: center;
+  overflow: hidden;
 }
 
 .day .container {
