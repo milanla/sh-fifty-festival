@@ -1,5 +1,5 @@
-/* @font-face allows us to embed custom fonts on our page */
-/* here we have the code snippet from css-tricks
+/* @font-face allows us to embed custom fonts on our page
+here we have the code snippet from css-tricks
 which provides modern (but still very wide) browser support*/
 @font-face {
   font-family: 'LunchType-Regular';
@@ -14,7 +14,10 @@ which provides modern (but still very wide) browser support*/
 .marquee,
 .lunch-medium,
 .date,
-.lineup h2 {
+.lineup h2,
+.button,
+.register h2,
+.submit {
   font-family: 'LunchType-Medium', Arial, Helvetica, sans-serif;
 }
 
@@ -117,8 +120,14 @@ ul, ol {
 }
 
 .intro p {
-  font-size: 36px;
+  font-size: 20px;
   line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .intro p {
+    font-size: 36px;
+  }
 }
 
 .bg-cover {
@@ -130,10 +139,17 @@ ul, ol {
 .logo {
   display: block;
   text-align: center;
-  margin-bottom: 32px;
-  max-width: 112px;
+  margin-bottom: 20px;
+  max-width: 64px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (min-wdith: 640px) {
+  .logo {
+    max-width: 112px;
+    margin-bottom: 32px;
+  }
 }
 
 .logo img {
@@ -153,12 +169,22 @@ ul, ol {
 }
 
 .marquee {
-  position: absolute;
-  top: 3vh;
-  left: 0;
-  width: 100%;
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-bottom: 24px;
+  width: 90vw;
   font-size: 5vw;
   overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .marquee {
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .marquee span {
@@ -185,7 +211,7 @@ ul, ol {
 }
 
 .day-1 {
-  background-color: #fd76A7;
+  background-color: #fd76a7;
 }
 
 .day-2 {
@@ -201,9 +227,15 @@ ul, ol {
 }
 
 .lineup h2 {
-  font-size: 56px;
+  font-size: 30px;
   line-height: 1;
   margin-bottom: 6px;
+}
+
+@media (min-width: 640px) {
+  .lineup h2 {
+    font-size: 56px;
+  }
 }
 
 .lineup p {
@@ -222,6 +254,7 @@ ul, ol {
 }
 
 .scroll-to {
+  display: none;
   position: absolute;
   left: 50%;
   bottom: 3vh;
@@ -232,6 +265,12 @@ ul, ol {
   background-image: url("../assets/images/down-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media (min-width: 640px) {
+  .scroll-to {
+    display: block;
+  }
 }
 
 .scroll-to-intro {
@@ -353,5 +392,123 @@ ul, ol {
   .in-viewport .date {
     opacity: 1;
   }
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.register {
+  min-height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffeed1;
+}
+
+.register h2 {
+  font-size: 28px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .register h2 {
+    font-size: 38px;
+  }
+}
+
+.register .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .register .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.form {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .form {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #00b290;
+}
+
+input {
+  background: none;
+  border: none;
+  font-size: 21px;
+}
+
+.email-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer {
+  min-height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #111118;
+  text-align: center;
+}
+
+.footer img {
+  max-width: 87px;
+  margin-bottom: 24px;
+}
+
+.button {
+  display: block;
+  border: 2px solid #ffeed1;
+  color: #ffeed1;
+  line-height: 1;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.eyes {
+  width: 108px;
+  height: 32px;
+  background-image: url("../assets/images/eyes_open.svg");
+}
+
+.hand {
+  width: 57px;
+  height: 89px;
+  background-image: url("../assets/images/ok_hand.svg");
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.eyes,
+.hand {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

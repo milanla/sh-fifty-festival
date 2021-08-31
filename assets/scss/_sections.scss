@@ -21,8 +21,12 @@
   color: #fff;
 
   p {
-    font-size: 36px;
+    font-size: 20px;
     line-height: 1.2;
+
+    @media (min-width: 640px) {
+      font-size: 36px;
+    }
   }
 }
 
@@ -35,10 +39,15 @@
 .logo {
   display: block;
   text-align: center;
-  margin-bottom: 32px;
-  max-width: 112px;
+  margin-bottom: 20px;
+  max-width: 64px;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-wdith: 640px) {
+    max-width: 112px;
+    margin-bottom: 32px;
+  }
 
   img {
     width: 100%;
@@ -54,12 +63,20 @@
 }
 
 .marquee {
-  position: absolute;
-  top: 3vh;
-  left: 0;
-  width: 100%;
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-bottom: 24px;
+  width: 90vw;
   font-size: 5vw;
   overflow: hidden;
+
+  @media (min-width: 640px) {
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+  }
 
   span {
     animation: moveLeft 200s linear infinite;
@@ -85,7 +102,7 @@
 }
 
 .day-1 {
-  background-color: #fd76A7;
+  background-color: #fd76a7;
 }
 
 .day-2 {
@@ -100,9 +117,13 @@
   text-align: center;
 
   h2 {
-    font-size: 56px;
+    font-size: 30px;
     line-height: 1;
     margin-bottom: 6px;
+
+    @media (min-width: 640px) {
+      font-size: 56px;
+    }
   }
 
   p {
@@ -123,6 +144,7 @@
 
 // Arrow link
 .scroll-to {
+  display: none;
   position: absolute;
   left: 50%;
   bottom: 3vh;
@@ -134,6 +156,10 @@
   background-image: url('../assets/images/down-arrow.svg');
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-width: 640px) {
+    display: block;
+  }
 }
 
 .scroll-to-intro {

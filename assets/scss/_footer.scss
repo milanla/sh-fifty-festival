@@ -1,0 +1,94 @@
+.flex-column {
+  flex-direction: column;
+}
+
+.register {
+  min-height: 65vh;
+  display: flex;
+  background-color: #ffeed1;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 48px;
+
+    @media (min-width: 640px) {
+      font-size: 38px;
+    }
+  }
+
+  .container {
+    display: flex;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.form {
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (min-width: 640px) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.sign-up {
+  display: flex;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #00b290;
+}
+
+input {
+  background: none;
+  border: none;
+  font-size: 21px;
+}
+
+.email-input {
+  flex: 1;
+}
+
+.footer {
+  min-height: 35vh;
+  display: flex;
+  background-color: #111118;
+  text-align: center;
+
+  img {
+    max-width: 87px;
+    margin-bottom: 24px;
+  }
+}
+
+.button {
+  display: block;
+  border: 2px solid #ffeed1;
+  color: #ffeed1;
+  line-height: 1;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.eyes {
+  width: 108px;
+  height: 32px;
+  background-image: url('../assets/images/eyes_open.svg');
+}
+
+.hand {
+  width: 57px;
+  height: 89px;
+  background-image: url('../assets/images/ok_hand.svg');
+  align-self: flex-end;
+}
+
+.eyes,
+.hand {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

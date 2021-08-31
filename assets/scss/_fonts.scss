@@ -1,5 +1,5 @@
-/* @font-face allows us to embed custom fonts on our page */
-/* here we have the code snippet from css-tricks
+/* @font-face allows us to embed custom fonts on our page
+here we have the code snippet from css-tricks
 which provides modern (but still very wide) browser support*/
 
 @font-face {
@@ -19,6 +19,9 @@ which provides modern (but still very wide) browser support*/
 .marquee,
 .lunch-medium,
 .date,
-.lineup h2 {
+.lineup h2,
+.button,
+.register h2,
+.submit {
   font-family: 'LunchType-Medium', Arial, Helvetica, sans-serif;
 }
